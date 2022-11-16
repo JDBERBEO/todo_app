@@ -1,0 +1,20 @@
+<h1>ALL TODO ENLISTED</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.description %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
