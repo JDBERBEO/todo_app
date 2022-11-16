@@ -7,4 +7,10 @@ class TodosController < ApplicationController
     @todos = Todo.all()
   
   end
+  def new
+  
+  end
+  def create
+    render plain: params[:todo]
+  end
 end
