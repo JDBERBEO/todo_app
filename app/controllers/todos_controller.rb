@@ -8,9 +8,15 @@ class TodosController < ApplicationController
   
   end
   def new
-  
+    @todo = Todo.new
   end
   def create
-    render plain: params[:todo]
+    @todo = Todo.new(params.require(:todo).permit(:title, :description))
+    if @todo.save
+      flash[:notice] = "Article was created successfully."
+      redirect_to @todo
+    else 
+      render 'new'
+    end
   end
 end
