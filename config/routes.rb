@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'pages#home'
   get 'about', to: "pages#about"
-  resources :todos, only: [:show, :index, :new, :create]
+  resources :todos, only: [:show, :index, :new, :create, :edit, :update]
 end
