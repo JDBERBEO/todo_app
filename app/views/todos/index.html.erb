@@ -13,7 +13,8 @@
       <tr>
         <td><%= todo.title %></td>
         <td><%= todo.description %></td>
-        <td>Placeholder</td>
+        <td><%= link_to 'Show', todo_path(todo) %></td>
+        <td><%= button_to 'Delete', todo_path(todo), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
