@@ -1,3 +1,7 @@
 <h1>SHOW TO-DO</h1>
 <p><b>Title: </b><%= @todo.title %></p>
 <p><b>Description: </b><%= @todo.description %></p>
+<%= link_to 'Edit', edit_todo_path(@todo)%>
+<%= link_to 'Delete', todo_path(@todo), method: :delete,:onclick=>"return confirm('Are you sure you want to delete this ')" %>
+
+<%= link_to 'Return to todos listing', todos_path %>
